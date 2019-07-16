@@ -23,13 +23,16 @@ public class Consumer extends Thread {
             ClientConsumer consumer = session.createConsumer(new SimpleString(queueName));
             for (;;) {
                 ClientMessage receive = consumer.receive(5000);
+
                 if (receive == null) {
                     System.out.println("timeout");
                     break;
                 }
+
                 System.out.println("Messages from Producer: " + receive.getBodyBuffer().readString());
                 receive.acknowledge();
             }
+
             session.close();
         } catch (Exception e) {
             e.printStackTrace();

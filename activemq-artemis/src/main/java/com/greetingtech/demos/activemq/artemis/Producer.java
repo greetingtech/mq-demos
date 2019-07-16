@@ -27,17 +27,19 @@ public class Producer extends Thread {
             ClientSession session = factory.createSession();
             session.start();
             ClientProducer producer = session.createProducer(address);
-
             ClientSession.QueueQuery exampleQueue = session.queueQuery(new SimpleString(queueName));
+
             if (!exampleQueue.isExists()) {
                 session.createQueue(address, RoutingType.ANYCAST, queueName, true);
             }
+
             for (int i = 0; i < 10; ++i) {
                 ClientMessage message = session.createMessage(true);
                 message.getBodyBuffer().writeString("Hello World at " + new Date().toString());
                 producer.send(message);
                 Thread.sleep(1000);
             }
+
             session.close();
         } catch (Exception e) {
             e.printStackTrace();
