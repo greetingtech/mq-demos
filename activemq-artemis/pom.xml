@@ -4,7 +4,7 @@
     <groupId>com.greetingtech.demos</groupId>
     <artifactId>activemq-artemis</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <name>activemq-artemis</name>
     <url>http://maven.apache.org</url>
     <dependencies>
