@@ -1,4 +1,4 @@
-package com.greetingtech.demos;
+package com.greetingtech.demos.activemq.artemis;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
