@@ -1,6 +1,6 @@
 package com.greetingtech.demos.kafka;
 
-public class Main {
+public class KafkaMain {
 
     public static void main(String[] args) throws Exception {
 
@@ -12,7 +12,7 @@ public class Main {
 
         producer.join();
         consumer.join();
-        
+
     }
 
 }

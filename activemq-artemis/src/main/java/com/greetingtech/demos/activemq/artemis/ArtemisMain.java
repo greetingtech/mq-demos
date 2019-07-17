@@ -2,7 +2,7 @@ package com.greetingtech.demos.activemq.artemis;
 
 import org.apache.activemq.artemis.api.core.client.*;
 
-public class Main {
+public class ArtemisMain {
 
     private static final String ADDRESS = "exampleAddress";
 
